@@ -1,0 +1,451 @@
+* {
+    margin: 0;
+    padding: 0;
+    outline: none;
+}
+
+body {
+    width: 100%;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+
+
+.nav {
+    width: 100%;
+    background: #231942;
+    display: flex;
+
+}
+
+.logo {
+    height: 54px;
+    display: flex;
+    align-items: center;
+    margin-left: 15px;
+}
+
+.logo img {
+    width: 130px;
+}
+
+.container-ul {
+    width: 80%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Libre Caslon Text', serif;
+}
+
+li {
+    list-style: none;
+    position: relative;
+    left: 18%;
+}
+
+li a {
+    text-decoration: none;
+    color: #fff;
+    padding: 17px 30px;
+    background: #5E548E;
+}
+
+.log-out {
+    width: 4%;
+    background: transparent;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 30px;
+    border: 0;
+    cursor: pointer;
+}
+
+.log-out i {
+    color: #fff;
+}
+
+/* Home */
+
+.home {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: url('img/weather-img-home.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    opacity: 0.9;
+}
+
+.title {
+    text-align: center;
+    font-family: 'Work Sans', sans-serif;
+    height: 50%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.title-h2 {
+    font-family: 'Work Sans', sans-serif;
+    font-size: 40px;
+    text-shadow: 1px 1px black;
+}
+
+
+.title2-h2 {
+    text-align: center;
+    font-family: 'Work Sans', sans-serif;
+    font-size: 30px;
+    position: relative;
+    top: 31%;
+    text-shadow: 1px 1px black;
+}
+
+.container-input {
+    display: flex;
+    width: 100%;
+    height: 90%;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+.container-input-name {
+    position: relative;
+    bottom: 35%;
+}
+
+.input-name {
+    height: 2.5em;
+    width: 14em;
+    text-align: center;
+    border-radius: 5px;
+    border: 0;
+}
+
+.name-button {
+    height: 2em;
+    width: 6em;
+    border-radius: 5px;
+    border: 0;
+    margin-left: 10px;
+}
+
+.location {
+    font-size: 30px;
+    text-align: center;
+    font-family: 'Arvo', serif;
+    position: relative;
+    bottom: 20%;
+}
+
+.location-h2 {
+    font-size: 30px;
+    margin-bottom: 25px;
+    text-shadow: 1px 1px black;
+}
+
+.search {
+    height: 2.5em;
+    width: 14em;
+    position: relative;
+    left: 13%;
+    text-align: center;
+    border-radius: 5px;
+    border: 0;
+}
+
+.search-button {
+    height: 2em;
+    width: 6em;
+    position: relative;
+    left: 11%;
+    border-radius: 5px;
+    border: 0;
+    margin-left: 10px;
+}
+
+.home {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    align-content: center;
+}
+
+.previsioni {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    align-content: center;
+}
+
+
+.container-meteo {
+    width: 100%;
+    background: #9F86C0;
+    display: flex;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+}
+
+.meteo-icon {
+    width: 100%;
+    height: 60%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    flex-direction: column-reverse;
+}
+
+.meteo-icon i {
+    font-size: 100px;
+}
+
+
+.container-info {
+    height: 49%;
+    width: 25%;
+    background: #231942;
+    position: relative;
+    left: 20%;
+    bottom: 7%;
+    border: 0;
+    border-radius: 5%;
+    padding: 10px;
+    color: #fff;
+}
+
+.info {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    line-height: 30px;
+    justify-content: center;
+}
+
+.location {
+    position: relative;
+    bottom: 28%;
+    font-size: 30px;
+    text-align: center;
+    font-family: 'Arvo', serif;
+}
+
+.wind {
+    position: relative;
+    bottom: 20%;
+    font-size: 15px;
+    margin-left: 20px;
+    display: flex;
+    font-family: 'Arvo', serif;
+}
+
+.humidity {
+    position: relative;
+    bottom: 10%;
+    margin-left: 20px;
+    display: flex;
+    font-family: 'Arvo', serif;
+    font-size: 15px;
+}
+
+.pressure {
+    margin-left: 20px;
+    display: flex;
+    font-family: 'Arvo', serif;
+    font-size: 15px;
+}
+
+.visibility {
+    position: relative;
+    top: 10%;
+    margin-left: 20px;
+    display: flex;
+    font-family: 'Arvo', serif;
+    font-size: 15px;
+}
+
+.temperature {
+    position: relative;
+    top: 20%;
+    margin-left: 20px;
+    display: flex;
+    font-family: 'Arvo', serif;
+    font-size: 15px;
+}
+
+.win {
+    width: 75%;
+    display: flex;
+    align-items: center;
+    height: 100%;
+    flex-direction: row-reverse;
+}
+
+
+.pres,
+.temp {
+    width: 67%;
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    height: 100%;
+}
+
+.humi {
+    width: 64%;
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    height: 100%;
+}
+
+.temp {
+    width: 71%;
+    position: relative;
+    left: 2%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+.visi {
+    width: 69%;
+    position: relative;
+    left: 14%;
+    display: flex;
+    justify-content: center;
+    flex-direction: row-reverse;
+    align-items: center;
+    height: 100%;
+}
+
+.container-text {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    text-align: justify;
+    top: 20%;
+    margin-left: 20px;
+    width: 32em;
+    font-family: 'Arvo', serif;
+    font-size: 23px;
+    line-height: 50px;
+    word-wrap: break-word;
+}
+
+.win i,
+.humi i {
+    display: flex;
+    align-items: flex-end;
+    width: 33%;
+    font-size: 25px;
+    justify-content: center;
+}
+
+.pres i {
+    display: flex;
+    align-items: flex-end;
+    width: 33%;
+    font-size: 25px;
+    justify-content: center;
+}
+
+.visi i {
+    display: flex;
+    align-items: flex-end;
+    width: 29%;
+    position: relative;
+    left: 2%;
+    font-size: 25px;
+    justify-content: center;
+}
+
+.temp i {
+    display: flex;
+    align-items: flex-end;
+    font-size: 25px;
+    position: relative;
+    left: 12%;
+    justify-content: center;
+}
+
+.win font {
+    position: relative;
+    left: 2%;
+}
+
+.humi font {
+    position: relative;
+    right: 14%;
+}
+
+
+.visi font {
+    position: relative;
+    right: 14%;
+}
+
+.temp font {
+    position: relative;
+    right: 15%;
+
+}
+
+footer {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 35px;
+    background: #5E548E;
+}
+
+/* mobile version */
+@media only screen and (max-width: 600px) {
+    .title-h2 {
+        font-size: 24px;
+    }
+
+    .title2-h2 {
+        font-size: 24px;
+        top: 19%;
+    }
+
+    .container-input-name {
+        bottom: 15%;
+    }
+
+    .location {
+        bottom: 8%;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .search {
+        left: 26%;
+    }
+
+    .search-button {
+        left: 37%;
+        margin-top: 21px;
+    }
+
+    li {
+        left: 19%;
+    }
+}

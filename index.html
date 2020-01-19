@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Weather App</title>
+    <link rel="stylesheet" href="style.css" />
+    <script
+      src="https://kit.fontawesome.com/d338b95a7a.js"
+      crossorigin="anonymous"
+    ></script>
+    <link
+      href="https://fonts.googleapis.com/css?family=Arvo|IM+Fell+Great+Primer+SC|Libre+Caslon+Text|Work+Sans&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://pro.fontawesome.com/releases/v5.12.0/css/all.css"
+    />
+  </head>
+
+  <body>
+    <nav class="nav" id="navBar">
+      <div class="logo">
+        <img src="img/logo.png" alt="" />
+      </div>
+      <ul class="container-ul" id="cont-ul">
+        <li><a href="index.html">Home</a></li>
+      </ul>
+    </nav>
+
+    <section class="home" id="cont-home">
+      <div class="title">
+        <h2 class="title-h2">Welcome to the Weather App</h2>
+        <h2 class="title2-h2">What is your name?</h2>
+      </div>
+      <div class="container-input">
+        <div class="container-input-name">
+          <input type="text" placeholder="name" class="input-name" id="inp" />
+        </div>
+        <div class="location">
+          <h2 class="location-h2">What is your location?</h2>
+          <input
+            type="search"
+            placeholder="location"
+            class="search"
+            id="inpSearch"
+          />
+          <button type="button" class="search-button" id="btnSearch">
+            Search
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <footer>&copy; Copyright 2020 Asu Software</footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
