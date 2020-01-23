@@ -19,7 +19,17 @@ body {
   width: 100%;
   background: #231942;
   display: none;
+  align-items: center;
   justify-content: space-between;
+}
+
+.select-value {
+  width: 7%;
+  height: 36%;
+  text-align-last: center;
+  position: relative;
+  right: 5%;
+
 }
 
 .logo {
