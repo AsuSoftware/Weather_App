@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Weather App</title>
+    <link rel="stylesheet" href="style.css" />
+    <link href="https://fonts.googleapis.com/css?family=Gelasio|Ibarra+Real+Nova|Lora|Noto+Sans&display=swap"
+        rel="stylesheet" />
+    <script src="https://kit.fontawesome.com/d338b95a7a.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.12.0/css/all.css" />
+</head>
+
+<body>
+    <nav class="nav" id="navBar">
+        <div class="logo">
+            <img src="img/logo.png" alt="" />
+        </div>
+        <select name="chose an option" class="select-value" onchange="location = this.value;">
+            <option disabled selected value> -- choose another language -- </option>
+            <option value="ita.html">IT</option>
+            <option value="ro.html">RO</option>
+        </select>
+    </nav>
+
+    <h1 id="loading">
+        <span class="let1">l</span>
+        <span class="let2">o</span>
+        <span class="let3">a</span>
+        <span class="let4">d</span>
+        <span class="let5">i</span>
+        <span class="let6">n</span>
+        <span class="let7">g</span>
+    </h1>
+
+    <section class="home" id="cont-home">
+        <form class="box">
+            <h2 class="title">Welcome to the Weather App</h2>
+            <h2 class="title-name">What is your name?</h2>
+            <input type="text" name="" placeholder="Name" id="input-name" />
+            <h2 class="location-h2">What is your location?</h2>
+            <input type="search" name="" placeholder="Location" id="input-location" />
+            <input type="button" name="" value="Enter" id="input-button" />
+        </form>
+    </section>
+
+    <footer>&copy; Copyright 2020 Asu Software</footer>
+
+    <script src="script3.js"></script>
+</body>
+
+</html>
