@@ -82,7 +82,7 @@ class WeatherInfo {
 
       this.showIcon("clear sky", this.sun());
       this.showIcon("rain", this.rain());
-      this.showIcon("ligth rain", this.rain());
+      this.showIcon("light rain", this.rain());
       this.showIcon("haze", this.haze());
       this.showIcon("snow", this.snow());
       this.showIcon("scattered clouds", this.clouds());
