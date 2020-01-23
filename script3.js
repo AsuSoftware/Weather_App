@@ -271,7 +271,7 @@ class WeatherInfo {
       this.format = "PM";
       const condition = this.conditionForMinutes("Good Afternoon");
       return condition;
-    } else if (this.hours > 19 && this.hours <= 0) {
+    } else if (this.hours > 19) {
       this.format = "PM";
       const condition = this.conditionForMinutes("Good Evening");
       return condition;
