@@ -13,7 +13,7 @@ class WeatherInfo {
   }
 
   displayBody() {
-    const loading = (document.getElementById("loading").style.display = "none");
+    document.getElementById("loading").style.display = "none";
     this.nav = document.getElementById("navBar");
     this.nav.style.display = "flex";
     this.section = document.getElementById("cont-home");
@@ -82,7 +82,7 @@ class WeatherInfo {
 
       this.showIcon("clear sky", this.sun());
       this.showIcon("rain", this.rain());
-      this.showIcon("light rain", this.rain());
+      this.showIcon("ligth rain", this.rain());
       this.showIcon("haze", this.haze());
       this.showIcon("snow", this.snow());
       this.showIcon("scattered clouds", this.clouds());
@@ -93,9 +93,63 @@ class WeatherInfo {
       this.showIcon("broken clouds", this.brokenClouds());
 
       console.log("success?", this.data);
-      console.log(this.data.name);
     } catch (err) {
       console.log("eroare?", err);
+      this.removeBody();
+      this.createError();
+    }
+  }
+
+  createError() {
+    this.nav.style.display = "none";
+    document.getElementsByTagName("footer")[0].style.display = "none";
+    const container = this.createElements("div", "cont", "container");
+    const content = this.createElements("div", "content");
+    container.appendChild(content);
+    const contentH2 = this.createElements("h2");
+    const textH2 = document.createTextNode("404");
+    contentH2.appendChild(textH2);
+    content.appendChild(contentH2);
+    const messageError = this.createElements("h4");
+    const textError = document.createTextNode("Opps! Page not found");
+    messageError.appendChild(textError);
+    content.appendChild(messageError);
+    const descriptionError = this.createElements("p");
+    const textDescription = document.createTextNode(
+      "It looks like the page was not found because you may have typed the wrong location or the server is not responding at this time"
+    );
+    descriptionError.appendChild(textDescription);
+    content.appendChild(descriptionError);
+    const buttonBack = this.createElements(
+      "button",
+      "back-button",
+      "error-button"
+    );
+    const textBackButton = document.createTextNode("Back to Home");
+    buttonBack.appendChild(textBackButton);
+    content.appendChild(buttonBack);
+    this.section.appendChild(container);
+    this.moveEffect(container);
+    buttonBack.addEventListener("click", () => {
+      this.removeBody();
+      console.clear();
+      this.createFormBody(); //This is the initial body
+      window.localStorage.clear();
+      this.checkLocal();
+      this.nav.style.display = "flex";
+      document.getElementsByTagName("footer")[0].style.display = "flex";
+    });
+  }
+
+  moveEffect(contenitor) {
+    //mose effect for error section
+    if (this.nav.style.display == "none") {
+      window.onmousemove = e => {
+        let x = -e.clientX / 5,
+          y = -e.clienty / 5;
+        contenitor.style.backgroundPositionX = x + "px";
+        contenitor.style.backgroundPositionY = y + "px";
+      };
     }
   }
 
@@ -121,6 +175,7 @@ class WeatherInfo {
     this.nav.appendChild(this.button_Log_Out);
     this.button_Log_Out.addEventListener("click", () => {
       this.removeBody();
+      this.nav.removeChild(this.button_Log_Out);
       this.createFormBody(); //This is the initial body
       window.localStorage.clear();
       this.checkLocal();
@@ -345,7 +400,6 @@ class WeatherInfo {
   }
 
   createFormBody() {
-    this.nav.removeChild(this.button_Log_Out);
     const form = this.createElements("form", "box");
     this.section.appendChild(form);
     const title = this.createElements("h2", "title");
