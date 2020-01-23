@@ -474,6 +474,12 @@ footer {
 
 /* mobile version */
 @media only screen and (max-width: 600px) {
+  
+  .select-value{
+        width: 31%;
+    background: #fff;
+  }
+  
   .box {
     width: 70%;
     height: 69%;
