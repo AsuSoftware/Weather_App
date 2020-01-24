@@ -262,7 +262,7 @@ class WeatherInfo {
     conditionForTime() {
         this.getTime();
 
-        if (this.hours > 0 && this.hours <= 12) {
+        if (this.hours > 0 && this.hours <= 12 || this.hours == '00') {
             //AM
             this.format = "AM";
             const condition = this.conditionForMinutes("Buongiorno");
@@ -290,7 +290,7 @@ class WeatherInfo {
             const descriptionText = document.createTextNode(
                 `${text} ${localStorage.name}, il tempo di oggi dice che  è ${
             this.data.weather[0].description
-          }. L'ora esatta per questa posizione è : ${this.date.getHours()}:0${this.date.getMinutes()} ${
+          }. L'ora esatta per questa posizione è : ${this.date.getHours() - 1}:0${this.date.getMinutes()} ${
             this.format
           }`
             );
@@ -301,7 +301,7 @@ class WeatherInfo {
             const descriptionText = document.createTextNode(
                 `${text} ${localStorage.name}, il tempo di oggi dice che  è ${
             this.data.weather[0].description
-          }. L'ora esatta per questa posizione è : ${this.date.getHours()}:${this.date.getMinutes()} ${
+          }. L'ora esatta per questa posizione è : ${this.date.getHours() - 1}:${this.date.getMinutes()} ${
             this.format
           }`
             );
