@@ -262,7 +262,7 @@ class WeatherInfo {
   conditionForTime() {
     this.getTime();
 
-    if (this.hours > 0 && this.hours <= 12) {
+    if (this.hours > 0 && this.hours <= 12 || this.hours == '00') {
       //AM
       this.format = "AM";
       const condition = this.conditionForMinutes("Good Morning");
