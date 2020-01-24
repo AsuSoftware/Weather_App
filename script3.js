@@ -290,7 +290,7 @@ class WeatherInfo {
       const descriptionText = document.createTextNode(
         `${text} ${localStorage.name}, today's weather says it is ${
           this.data.weather[0].description
-        }. The exact time for this location is : ${this.date.getHours()}:0${this.date.getMinutes()} ${
+        }. The exact time for this location is : ${this.date.getHours() - 1}:0${this.date.getMinutes()} ${
           this.format
         }`
       );
@@ -301,7 +301,7 @@ class WeatherInfo {
       const descriptionText = document.createTextNode(
         `${text} ${localStorage.name}, today's weather says it is ${
           this.data.weather[0].description
-        }. The exact time for this location is : ${this.date.getHours()}:${this.date.getMinutes()} ${
+        }. The exact time for this location is : ${this.date.getHours() - 1}:${this.date.getMinutes()} ${
           this.format
         }`
       );
