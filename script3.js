@@ -55,7 +55,7 @@ class WeatherInfo {
       const xhttp = new XMLHttpRequest(); //Ajax request
       xhttp.open(
         "GET",
-        `http://api.openweathermap.org/data/2.5/weather?q=${location}&units=metric&APPID=a910fee0cd049472598ab5bd81087ac5`,
+        `http://api.openweathermap.org/data/2.5/weather?q=${location}&units=metric&APPID=77baa375c1947e78794ecc3c3486675d`,
         true
       );
       xhttp.send();
